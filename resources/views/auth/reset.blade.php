@@ -53,3 +53,4 @@
     <!-- Page Specific JS File -->
     <script src="{{ asset('js/page/auth-register.js') }}"></script>
 @endpush
+<!-- -->

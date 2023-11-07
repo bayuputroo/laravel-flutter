@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('blank-page', ['type_menu' => '']);
+    return view('auth.login', ['type_menu' => '']);
 });
 
 //Route::get('/login', function () {

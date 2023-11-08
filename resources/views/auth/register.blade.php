@@ -21,7 +21,7 @@
                         class="form-control @error('name')
                         is-invalid
                     @enderror"
-                        name="frist_name" autofocus>
+                        name="name" autofocus>
                     @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}

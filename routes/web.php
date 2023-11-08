@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('auth.login', ['type_menu' => '']);
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     route::get('home', function () {
         return view('layouts.app', ['type_menu' => '']);
     })->name('home');

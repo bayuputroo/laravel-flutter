@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('auth.login', ['type_menu' => '']);
 });
 
+Route::middleware(['auth'])->group(function () {
+    route::get('home', function () {
+        return view('layouts.app', ['type_menu' => '']);
+    })->name('home');
+});
+
 //Route::get('/login', function () {
 //    return view('auth.login');
 //});

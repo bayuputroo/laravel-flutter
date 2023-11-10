@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified'])->group(function () {
     route::get('home', function () {
         return view('layouts.app', ['type_menu' => '']);
-    })->name('home');
+    })->name('home')->middleware('can:dashboard');
 });
 
 //Route::get('/login', function () {

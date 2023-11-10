@@ -19,8 +19,12 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     route::get('home', function () {
-        return view('pages.daashboard', ['type_menu' => '']);
+        return view('pages.dashboard', ['type_menu' => '']);
     })->name('home')->middleware('can:dashboard');
+
+    Route::get('profile-edit', function () {
+        return view('pages.profile', ['type_menu' => '']);
+    })->name('profile.edit');
 });
 
 //Route::get('/login', function () {

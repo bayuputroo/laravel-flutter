@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     route::get('home', function () {
-        return view('layouts.app', ['type_menu' => '']);
+        return view('pages.daashboard', ['type_menu' => '']);
     })->name('home')->middleware('can:dashboard');
 });
 

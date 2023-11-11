@@ -25,13 +25,13 @@ class OrderController extends Controller
             OrderItem::create([
                 'order_id' => $order->id,
                 'product_id' => $item['id'],
-                'quantity' => $item['quantity'],
+                'quantity' => $item['quantity']
             ]);
             $midtrans = new CreatePaymentUrlService();
             $paymentUrl = $midtrans->getPaymentUrl($order->load('user', 'orderItems'));
 
             $order->update([
-                'payment_url' => $paymentUrl,
+                'payment_url' => $paymentUrl
             ]);
         }
 

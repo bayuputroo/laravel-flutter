@@ -34,5 +34,14 @@ class UserSeeder extends Seeder
             'bio' => 'flutter developer',
             'password' => Hash::make('12345'),
         ]);
+        User::create([
+            'name' => 'Thorik_tk',
+            'email' => 'thoriktk@mail.com',
+            'email_verified_at' => now(),
+            'role' => 'user',
+            'phone' => '081337919926',
+            'bio' => 'flutter developer',
+            'password' => Hash::make('11223344'),
+        ]);
     }
 }

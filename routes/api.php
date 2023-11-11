@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\UploadController;
+use App\Http\Controllers\Api\CallbackController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,6 @@ Route::post('orders', [OrderController::class, 'order'])
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::apiResource('products', ProductController::class);
+
+
+Route::post('midtrans/notification/handling', [CallbackController::class, 'callback']);
